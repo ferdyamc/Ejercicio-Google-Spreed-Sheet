@@ -3,19 +3,18 @@
             'use strict'
 
             // Captura en un arreglo (Constante) todos los formularios con la clase "needs-validation"
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwp00OTL92OWEwShj-UPJsVivN49gVEcUuMwkCmRCa-x_6Pe2b7ETOJb_SlM2KS-Zsdjw/exec'
             const mensaje = document.getElementById("Mensaje-resultado")
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwp00OTL92OWEwShj-UPJsVivN49gVEcUuMwkCmRCa-x_6Pe2b7ETOJb_SlM2KS-Zsdjw/exec'           
             const forms = document.querySelectorAll('.needs-validation')
 
-            // Reccorre el arreglo y asigna a cada formulario un evento de submit (el evento detiene el submit en caso de que los campos no esten completamente validados).
+            // Recorre el arreglo y asigna a cada formulario un evento de submit (el evento detiene el submit en caso de que los campos no esten completamente validados).
             Array.from(forms).forEach(form => {
                 form.addEventListener('submit', event => {
                     event.preventDefault()
+
                     if (!form.checkValidity()) {
-                    //event.preventDefault()
-                    event.stopPropagation()
-                    }else{
-     
+                        event.stopPropagation()
+                    }else{     
                         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                         .then(response => {
                             mensaje.innerHTML="Datos enviados correctamente!"
@@ -32,6 +31,7 @@
                     }
 
                     form.classList.add('was-validated')
+                    
                 }, false)
             })
         })()
