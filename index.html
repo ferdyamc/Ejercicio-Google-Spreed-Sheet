@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Form-data</title>
+</head>
+<body>
+
+    <header class=""></header>
+
+    <main class="container-fluid p-0">
+        <section class="bg-info d-flex flex-column justify-content-center">
+            <h1 class="text-center text-info-emphasis mb-5">Form-data</h1>
+            <form  action="" class="col-8 offset-2 needs-validation" novalidate>
+
+                <div class="form-floating mb-5 position-relative has-validation">                   
+                    <input type="text" name="Nombre" class="form-control" id="InpNombre" placeholder="Example" required autocomplete="off">
+                    <label for="InpNombre" class="form-label">Nombre</label>
+                    <div class="invalid-tooltip">
+                        Por favor ingrese el nombre.
+                    </div>
+                </div>
+                <div class="form-floating mb-5 position-relative has-validation">                   
+                    <input  type="email" name="Correo" class="form-control" id="InpCorreo" placeholder="example@gmail.com" required autocomplete="off">
+                    <label for="InpCorreo" class="form-label">E-mail</label>
+                    <div class="invalid-tooltip">
+                        Por favor ingrese un correo electrónico en cual podmamos contactarlo.
+                    </div>
+                </div>
+                <div class="form-floating mb-5 position-relative has-validation">                   
+                    <input type="text" name="Telefono" class="form-control" id="InpTelefono" placeholder="Example" required autocomplete="off">
+                    <label for="InpTelefono" class="form-label">Telefono</label>
+                    <div class="invalid-tooltip">
+                        Por favor ingrese un número telefónico al cual podamos contactarlo.
+                    </div>
+                </div>
+                <div class="form-floating mb-5 position-relative has-validation">
+                    <Textarea name="Mensaje" class="form-control" id="InpMensaje" placeholder="Mensaje" required autocomplete="off"></Textarea>                   
+                    <label for="InpMensaje" class="form-label">Mensaje</label>
+                    <div class="invalid-tooltip">
+                        Por favor ingrese un número telefónico al cual podamos contactarlo.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Guardar</button>
+                </div>
+            </form>
+            <span id="Mensaje-resultado" class="mt-5 text-light text-center"></span>
+        </section>
+    </main>
+
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="JS/form-validation.js"></script>
+</body>
+</html>
